@@ -23,7 +23,7 @@ class ConfigProvider
     {
         return [
             'aliases'   => [
-                Debug::class => 'Debug',
+                'Debug' => Debug::class,
             ],
             'factories' => [
                 Debug::class => InvokableFactory::class,
