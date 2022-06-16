@@ -1,0 +1,35 @@
+{
+    "name": "webinertia/webinertia-utils",
+    "description": "Webinertia Org Utilities",
+    "keywords": [
+        "webinertia",
+        "utils"
+    ],
+    "homepage": "https://github.com/webinertia",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": "^7.3 || ~8.0.0",
+        "laminas/laminas-component-installer" : "^2.6",
+        "laminas/laminas-servicemanager": "^3.11.1"
+    },
+    "suggest": {
+        "laminas/laminas-component-installer" : "^2.6, required for configuration injection"
+    },
+    "extra": {
+        "laminas": {
+            "component": "Webinertia\\Utils",
+            "config-provider": "Webinertia\\Utils\\ConfigProvider"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Webinertia\\Utils\\": "src/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/webinertia/modelmanager/issues",
+        "chat": "https://github.com/webinertia/modelmanager/discussions",
+        "source": "https://github.com/webinertia/modelmanager",
+        "docs": "https://github.com/webinertia/modelmanager/wiki"
+    }
+}
