@@ -14,6 +14,9 @@ class TimerFactory implements FactoryInterface
     /** @inheritDoc */
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): Timer
     {
-        return new $requestedName($container->get(LoggerInterface::class));
+        return new $requestedName(
+            $container->get(LoggerInterface::class),
+            $container->get('config')['diagnostic_settings']
+        );
     }
 }

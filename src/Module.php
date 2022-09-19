@@ -16,10 +16,15 @@ class Module
     public function getConfig()
     {
         return [
-            'listeners' => [
+            'diagnostic_settings' => [
+                'log_execution_time'  => true,
+                'enable_firebug'      => true,
+                'enable_db_profiling' => true,
+            ],
+            'listeners'           => [
                 Diagnostics\Timer::class,
             ],
-            'service_manager' => (new ConfigProvider())->getDependencyConfig(),
+            'service_manager'     => (new ConfigProvider())->getDependencyConfig(),
         ];
     }
 }
