@@ -15,9 +15,11 @@ class Module
      */
     public function getConfig()
     {
-        $provider = new ConfigProvider();
         return [
-            'service_manager' => $provider->getDependencyConfig(),
+            'listeners' => [
+                Diagnostics\Timer::class,
+            ],
+            'service_manager' => (new ConfigProvider())->getDependencyConfig(),
         ];
     }
 }

@@ -26,7 +26,8 @@ class ConfigProvider
                 'Debug' => Debug::class,
             ],
             'factories' => [
-                Debug::class => InvokableFactory::class,
+                Debug::class             => InvokableFactory::class,
+                Diagnostics\Timer::class => Diagnostics\TimerFactory::class,
             ],
         ];
     }
