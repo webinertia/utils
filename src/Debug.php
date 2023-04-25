@@ -24,7 +24,7 @@ declare(strict_types=1);
 
 namespace Webinertia\Utils;
 
-use Throwable;
+use Exception;
 
 use function basename;
 use function extension_loaded;
@@ -96,9 +96,9 @@ class Debug
             $label = $label . PHP_EOL;
         }
         try {
-            throw new Throwable();
-        } catch (Throwable $th) {
-            $trace = $th->getTrace();
+            throw new Exception();
+        } catch (Exception $ex) {
+            $trace = $ex->getTrace();
             $file  = $showFullPath ? $trace[0]['file'] : basename($trace[0]['file']);
             $label .= 'Dumped from file: ' . $file . ' on line: ' . $trace[0]['line'];
         }
