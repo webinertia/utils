@@ -95,6 +95,7 @@ class Debug
         if (strlen($label) >= 1) {
             $label = $label . PHP_EOL;
         }
+
         try {
             throw new Exception();
         } catch (Exception $ex) {
