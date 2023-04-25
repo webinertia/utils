@@ -9,11 +9,8 @@
     "license": "BSD-3-Clause",
     "require": {
         "php": "~8.1.0 || ~8.2.0",
-        "laminas/laminas-component-installer" : "^2.8.0",
-        "laminas/laminas-servicemanager": "^3.11.1"
-    },
-    "suggest": {
-        "laminas/laminas-component-installer" : "^2.8.0, required for configuration injection"
+        "laminas/laminas-component-installer" : "^3.2.0",
+        "laminas/laminas-servicemanager": "^3.20.0"
     },
     "extra": {
         "laminas": {
